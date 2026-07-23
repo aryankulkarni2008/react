@@ -1,0 +1,5 @@
+kulkarniaryan852_db_user
+
+PowQGMyPs8KjrQOu
+
+mongodb+srv://kulkarniaryan852_db_user:PowQGMyPs8KjrQOu@cluster0.vmazyuu.mongodb.net/?appName=Cluster0
