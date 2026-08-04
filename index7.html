@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Search</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    padding:20px;
+}
+
+#searchBar{
+    width:300px;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+#productContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:220px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:10px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<input type="text" id="searchBar" placeholder="Search here...">
+
+<div id="productContainer"></div>
+
+<script>
+
+let container = document.getElementById("productContainer");
+let search = document.getElementById("searchBar");
+
+let products = [
+{
+    name:"Mobile",
+    price:15000,
+    img:"mobile.png"
+},
+{
+    name:"Laptop",
+    price:55000,
+    img:"laptop.png"
+},
+{
+    name:"Headphone",
+    price:2000,
+    img:"headphone.png"
+},
+{
+    name:"Keyboard",
+    price:1200,
+    img:"keyboard.png"
+}
+];
+
+function display(list){
+    container.innerHTML = "";
+
+    list.forEach(function(product){
+
+        let div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+            <img src="${product.img}">
+            <h3>${product.name}</h3>
+            <p>₹${product.price}</p>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+display(products);
+
+search.addEventListener("input",function(){
+
+    let value = search.value.toLowerCase();
+
+    let filtered = products.filter(function(p){
+        return p.name.toLowerCase().includes(value);
+    });
+
+    display(filtered);
+});
+
+</script>
+
+</body>
+</html>
