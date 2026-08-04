@@ -1,6 +1,12 @@
-const a=require("./module")
-console.log("hello js");
+const student = require("./student");
 
-a.add(10,20);
-a.sub(30,20);
-a.mul(10,20);
+student.insert("Ajinkya");
+student.insert("Aryan");
+
+student.display();
+
+student.update("Aryan" , "Pruthviraj");
+
+student.remove("Aryan");
+
+student.display();
