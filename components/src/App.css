@@ -1,0 +1,12 @@
+body{
+    background:linear-gradient(to right,red,rgb(47, 47, 139));
+}
+.container{
+    height:500px;
+    width:400px;
+    background-color:rgb(255, 193, 193);
+    margin-left:550px;
+}
+.heading{
+    text-align:center;
+}
