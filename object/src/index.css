@@ -1,0 +1,177 @@
+/* =========================
+   Global Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #222;
+}
+
+
+/* =========================
+   Main App
+========================= */
+
+.app {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+
+/* =========================
+   Main Heading
+========================= */
+
+.app h1 {
+  text-align: center;
+  color: white;
+  font-size: 38px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   Card Heading
+========================= */
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* =========================
+   Student Information
+========================= */
+
+.card p {
+  background: #f5f6ff;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+
+  font-size: 16px;
+  color: #444;
+}
+
+
+/* =========================
+   Subjects List
+========================= */
+
+ul {
+  list-style: none;
+  margin: 15px 0 20px;
+  padding: 0;
+}
+
+li {
+  background: #f5f6ff;
+  padding: 13px 16px;
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+
+  border-left: 4px solid #667eea;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+  border: none;
+  padding: 11px 18px;
+  margin: 5px;
+
+  border-radius: 8px;
+
+  background: #667eea;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #5568d9;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(102, 126, 234, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    width: 92%;
+    margin: 35px auto;
+  }
+
+  .app h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
